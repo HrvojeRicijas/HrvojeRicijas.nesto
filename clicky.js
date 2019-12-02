@@ -9,7 +9,10 @@ var autoprice = [10, 100, 500, 10000];
 function startup()
 {
     populateAutos();
+    load();
+    value=0;
     setInterval(function(){timeevent()}, 100);
+
 }
 
 

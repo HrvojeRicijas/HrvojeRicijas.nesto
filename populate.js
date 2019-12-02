@@ -10,6 +10,7 @@
 */
 
 function createAuto(id){
+
     var autobutton = document.createElement('button')
     autobutton.type = "button";
     autobutton.onclick = function(){buyauto (id);};

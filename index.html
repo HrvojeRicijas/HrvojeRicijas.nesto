@@ -1,6 +1,3 @@
-
-
-
 <html>
     <head>
         <title>Mis!</title>
@@ -8,9 +5,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <?php require 'cookieManipulation.php' ?>
         <script type="text/javascript" src="clicky.js"></script>
         <script type="text/javascript" src="populate.js"></script>
+        <script type="text/javascript" src="CookieManipulation.js"></script>
 
 
         <!-- Styles -->
@@ -56,16 +53,13 @@
         </style>
     </head>
 
-    <body onload="startup()">
+    <body onload="startup()" onunload="save()">
         <div style="height: 100%; display: inline-flex; width: 100%">
 
             <div style="display: inline-flex; height: 100%; width: 80%">
                 <input type="button" value="0" id="clickbutton" onclick="clickevent()" style="flex: 1">
             </div
             ><div id="autos"  class="autos">
-
-
-
                 <!--div class="autobox">
                     <div class="buttonbox" >
                         <button type="button" id="autobutton0" onclick="buyauto(0)" class="buybutton">0</button>
@@ -98,18 +92,8 @@
                     <label id="autoproduction3">Production: 0</label>
 
                 </div-->
-
-
-
-
-
             </div>
         </div>
     </body>
 
 </html>
-
-<script>
-    document.cookie="thething=1";
-</script>
-
