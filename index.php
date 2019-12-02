@@ -1,3 +1,6 @@
+
+
+
 <html>
     <head>
         <title>Mis!</title>
@@ -5,8 +8,10 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-
+        <?php require 'cookieManipulation.php' ?>
         <script type="text/javascript" src="clicky.js"></script>
+        <script type="text/javascript" src="populate.js"></script>
+
 
         <!-- Styles -->
         <style>
@@ -19,45 +24,58 @@
                 margin: 0;
             }
 
-            .full{
+            .autobox{
                 flex: 1;
                 display:inline-flex;
                 flex-direction: column;
             }
 
-            .buybutton{
+            .buttonbox{
                 flex: 1;
-                height: 80%;
+                display:inline-flex;
+                flex-direction: row;
             }
 
-            div {
+            .buybutton{
                 height: 100%;
-                width: 100%;
-                background: black;
-
-                position: fixed;
-                top: 50%;
-                left: 50%;
-
+                width: 75%;
             }
+
+            .upgradebutton{
+                height: 100%;
+                width: 25%;
+            }
+
+            .autos{
+                display: inline-flex;
+                flex-direction: column;
+                height: 100%;
+                width: 20%
+            }
+
         </style>
     </head>
 
-    <body onload="startup()" style="background-color: black">
-        <!--div style="height: 100%; display: inline-flex; width: 100%">
+    <body onload="startup()">
+        <div style="height: 100%; display: inline-flex; width: 100%">
+
             <div style="display: inline-flex; height: 100%; width: 80%">
                 <input type="button" value="0" id="clickbutton" onclick="clickevent()" style="flex: 1">
-            </div><div style="display: inline-flex;flex-direction: column; height: 100%; width: 20%">
+            </div
+            ><div id="autos"  class="autos">
 
-                <div class="full">
-                    <button type="button" value="0" id="autobutton0" onclick="buyauto(0)" class="buybutton">0</button>
 
+
+                <!--div class="autobox">
+                    <div class="buttonbox" >
+                        <button type="button" id="autobutton0" onclick="buyauto(0)" class="buybutton">0</button>
+                        <button type="button" id="upgradebutton0" onclick="upgradeauto(0)" class="upgradebutton">0</button>
+                    </div>
                         <label id="autoprice0">Price: 10</label>
                         <label id="autoproduction0">Production: 0</label>
+                </-div>
 
-                </div>
-
-                <div class="full">
+                <div class="autobox">
                     <button type="button" value="0" id="autobutton1" onclick="buyauto(1)" class="buybutton">0</button>
 
                         <label id="autoprice1">Price: 100</label>
@@ -65,7 +83,7 @@
 
                 </div>
 
-                <div class="full">
+                <div class="autobox">
                     <button type="button" value="0" id="autobutton2" onclick="buyauto(2)" class="buybutton">0</button>
 
                        <label id="autoprice2">Price: 500</label>
@@ -73,27 +91,25 @@
 
                 </div>
 
-                <div class="full">
+                <div class="autobox">
                     <button type="button" value="0" id="autobutton3" onclick="buyauto(3)" class="buybutton">0</button>
 
                     <label id="autoprice3">Price: 2500</label>
                     <label id="autoproduction3">Production: 0</label>
 
-                </div>
+                </div-->
 
-                <div class="full">
-                    <button type="button" value="0" id="autobutton4" onclick="buyauto(4)" class="buybutton">0</button>
 
-                    <label id="autoprice4">Price: 10000</label>
-                    <label id="autoproduction4">Production: 0</label>
 
-                </div>
+
 
             </div>
-        </div-->
-    <div>
-        <b style="color: red; font-size: 50px"> <3 </b>
-    </div>
+        </div>
     </body>
+
 </html>
+
+<script>
+    document.cookie="thething=1";
+</script>
 

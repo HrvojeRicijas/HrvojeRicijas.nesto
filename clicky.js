@@ -1,13 +1,14 @@
 var value=0;
 var clickpower=1;
-var autoamount = [0, 0, 0, 0, 0];
-var autopower = [0.1, 0.5, 2, 5, 10];
-var autoprice = [10, 100, 500, 2500, 10000];
+var autoamount = [0, 0, 0, 0];
+var autopower = [0.1, 0.5, 2, 10];
+var autoprice = [10, 100, 500, 10000];
 
 
 
 function startup()
 {
+    populateAutos();
     setInterval(function(){timeevent()}, 100);
 }
 
@@ -55,4 +56,10 @@ function autochecker(){
             document.getElementById(("autobutton" + i)).disabled = true;
         }
     }
+}
+
+
+function upgradeauto(){
+
+
 }
