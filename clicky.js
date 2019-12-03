@@ -1,8 +1,18 @@
-var value=0;
-var clickpower=1;
-var autoamount = [0, 0, 0, 0];
-var autopower = [0.1, 0.5, 2, 10];
-var autoprice = [10, 100, 500, 10000];
+var beginvalue = 0;
+var beginclickpower = 1;
+var beginautoamount = [0, 0, 0, 0];
+var beginautopower = [0.1, 0.5, 2, 10];
+var beginautoprice = [10, 100, 500, 10000];
+
+
+
+var value = parseInt(beginvalue.toString());;
+var clickpower = parseInt(beginclickpower.toString());
+var autoamount = beginautoamount.slice(0);
+var autopower = beginautopower.slice(0);
+var autoprice = beginautoprice.slice(0);
+
+
 
 
 
@@ -10,21 +20,44 @@ function startup()
 {
     populateAutos();
     load();
-    value=0;
     setInterval(function(){timeevent()}, 100);
 
 }
 
 
-function update()
+
+function restart(){
+
+    clickpower = parseInt(beginclickpower.toString());
+    autoamount = beginautoamount.slice(0);
+    autopower = beginautopower.slice(0);
+    autoprice = beginautoprice.slice(0);
+    updatevalue();
+    updateautos();
+
+
+}
+
+
+function updatevalue()
 {
     document.getElementById("clickbutton").value = Math.floor( value );
 }
 
+function updateautos(){
+    for (var id = 0; id < autoamount.length; id++) {
+        document.getElementById(("autoprice" + id)).textContent = "Price: " + Math.floor(autoprice [id]);
+        document.getElementById(("autoproduction" + id)).textContent = "Production: " + Math.floor(autoamount [id] * autopower[id] * 10) + " clicks per second";
+        document.getElementById(("autobutton" + id)).textContent = autoamount [id];
+    }
+
+}
+
 function clickevent()
 {
+
     value = value + clickpower;
-    update();
+    updatevalue();
 }
 
 function timeevent()
@@ -37,7 +70,7 @@ function timeevent()
 
     value = value + addtovalue;
     //autochecker();
-    update();
+    updatevalue();
 }
 
 function buyauto(id){

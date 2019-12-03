@@ -1,7 +1,6 @@
 
 function load() {
-    var keks = document.cookie.split(";")/*.filter(function(item) {
-        return item.trim().indexOf('=') == 0;}*/
+    var keks = document.cookie.split(";");
     var val = 0;
     var j = 0;
     for (var i = 0; i < autoamount.length; i++){
@@ -13,11 +12,12 @@ function load() {
         document.getElementById(("autoproduction" + j)).textContent = "Production: " + Math.floor(autoamount [j] * autopower[j] * 10) + " clicks per second";
         document.getElementById(("autobutton" + j)).textContent = autoamount [j];
     }
-    value = parseInt([(keks.length)-1]);
-   // document.write(value);
+    var mrkva = keks[(keks.length) - 1].slice(3);
+
+    value = parseInt(mrkva, 10);
 }
 function save() {
-    var cookievalue
+    var cookievalue;
     for (var i = 0; i < autoamount.length; i++){
         cookievalue = "auto" + i + "=" + autoamount[i] + "; expires=Thu, 18 Dec 2020 12:00:00 UTC";
         window.alert(cookievalue);
