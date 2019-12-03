@@ -4,7 +4,7 @@ function load() {
         return item.trim().indexOf('=') == 0;}*/
     var val = 0;
     var j = 0;
-    for (var i = 0; i < autoamount.length-1; i++){
+    for (var i = 0; i < autoamount.length; i++){
         j = keks[i].slice(keks[i].indexOf('=')-1, keks[i].indexOf('='));
         val = keks[i].slice(keks[i].indexOf('=')+1);
         autoamount[j] = val;
