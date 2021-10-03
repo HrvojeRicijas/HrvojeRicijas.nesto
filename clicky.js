@@ -1,8 +1,8 @@
 var beginvalue = 0;
 var beginclickpower = 1;
-var beginautoamount = [0, 0, 0, 0];
-var beginautopower = [0.1, 0.5, 2, 10];
-var beginautoprice = [10, 100, 500, 10000];
+var beginautoamount = [0, 0, 0, 0, 1, 0];
+var beginautopower = [0.1, 0.5, 2, 10, 50, 100];
+var beginautoprice = [10, 100, 500, 10000, 72351, 111111];
 
 
 
