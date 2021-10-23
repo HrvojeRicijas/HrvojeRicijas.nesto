@@ -19,7 +19,7 @@ var autoprice = beginautoprice.slice(0);
 function startup()
 {
     populateAutos();
-    //load();
+    load();
     setInterval(function(){timeevent()}, 100);
 
 }
