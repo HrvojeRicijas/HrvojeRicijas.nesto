@@ -19,11 +19,11 @@ function load() {
 function save() {
     var cookievalue;
     for (var i = 0; i < autoamount.length; i++){
-        cookievalue = "auto" + i + "=" + autoamount[i] + "; expires=Thu, 18 Dec 2030 12:00:00 UTC";
+        cookievalue = "auto" + i + "=" + autoamount[i] + "; expires=Thu, 19 Dec 2030 12:00:00 UTC";
         window.alert(cookievalue);
         document.cookie = cookievalue;
     }
-    cookievalue = "v=" + Math.floor(value) + "; expires=Thu, 18 Dec 2030 12:00:00 UTC";
+    cookievalue = "v=" + Math.floor(value) + "; expires=Thu, 19 Dec 2030 12:00:00 UTC";
     document.cookie = cookievalue;
 
 }
